@@ -2,9 +2,11 @@ sudo: required
 services:
   - docker
 
+
 before_install:
   - docker build -t venkatchidipudi/devopswithaws -f Dockerfile.dev .
 
+
 script:
   - docker run venkatchidipudi/devopswithaws npm run test -- --coverage
-  
+
